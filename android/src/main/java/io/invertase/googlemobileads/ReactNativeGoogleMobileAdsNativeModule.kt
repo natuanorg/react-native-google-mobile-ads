@@ -16,7 +16,7 @@ package io.invertase.googlemobileads
  * limitations under the License.
  *
  */
-
+import android.util.Log
 import com.facebook.react.bridge.Arguments
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
@@ -85,7 +85,24 @@ class ReactNativeGoogleMobileAdsNativeModule(
         }
 
         promise.resolve(data)
-      }
+      }.withAdListener(object: AdListener(){
+        override fun onAdFailedToLoad(p0: LoadAdError) {
+          super.onAdFailedToLoad(p0)
+          Log.d(NAME, "onAdFailedToLoad")
+        }
+        override fun onAdLoaded() {
+          super.onAdLoaded()
+          Log.d(NAME, "onAdLoaded")
+        }
+        override fun onAdImpression() {
+          super.onAdImpression()
+          Log.d(NAME, "onAdImpression")
+        }
+        override fun onAdClicked() {
+          super.onAdClicked()
+          Log.d(NAME, "onAdClicked")
+        }
+      })
       .build()
     val adRequest = ReactNativeGoogleMobileAdsCommon.buildAdRequest(requestOptions)
     adLoader.loadAd(adRequest)
