@@ -25,6 +25,8 @@ import com.google.android.gms.ads.AdLoader
 import com.google.android.gms.ads.MediaAspectRatio
 import com.google.android.gms.ads.nativead.NativeAd
 import com.google.android.gms.ads.nativead.NativeAdOptions
+import com.google.android.gms.ads.AdListener
+import com.google.android.gms.ads.LoadAdError
 
 class ReactNativeGoogleMobileAdsNativeModule(
   reactContext: ReactApplicationContext
