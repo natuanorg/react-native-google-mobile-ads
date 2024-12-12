@@ -230,6 +230,10 @@ public class ReactNativeGoogleMobileAdsBannerAdViewManager
               adView.layout(left, top, left + width, top + height);
             }
 
+            if(adView.isCollapsible()){
+              adView.getRootView().requestLayout();
+            }
+
             WritableMap payload = Arguments.createMap();
             payload.putDouble("width", PixelUtil.toDIPFromPixel(width));
             payload.putDouble("height", PixelUtil.toDIPFromPixel(height));
