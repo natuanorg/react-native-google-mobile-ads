@@ -1,1 +1,0 @@
-{"version":3,"file":"NativeAdRequestOptions.d.ts","sourceRoot":"","sources":["../../../src/types/NativeAdRequestOptions.ts"],"names":[],"mappings":"AAiBA,OAAO,EAAE,cAAc,EAAE,MAAM,kBAAkB,CAAC;AAElD,oBAAY,sBAAsB;IAChC,GAAG,IAAI;IACP,SAAS,IAAI;IACb,QAAQ,IAAI;IACZ,MAAM,IAAI;CACX;AAED,MAAM,WAAW,sBAAuB,SAAQ,cAAc;IAC5D,WAAW,CAAC,EAAE,sBAAsB,CAAC;CACtC"}
